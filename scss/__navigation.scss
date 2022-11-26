@@ -119,6 +119,12 @@
               content: "\25BC";
             }
           }
+          .down {
+            &::after {
+              padding-left: 4px;
+              content: "\25B2";
+            }
+          }
         }
         .second-level {
           position: static;

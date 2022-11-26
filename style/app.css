@@ -233,6 +233,11 @@ h6 {
   content: "\25BC";
 }
 
+.navigation .nav-container .nav .first-level li .down::after {
+  padding-left: 4px;
+  content: "\25B2";
+}
+
 .navigation .nav-container .nav .first-level .second-level {
   position: static;
   display: none;

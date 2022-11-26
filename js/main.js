@@ -1,69 +1,56 @@
-window.addEventListener("load", function(e) {
+window.addEventListener(
+  "load",
+  function (e) {
+    let navHam = document.getElementById("nav-ham");
+    let firstLevel = document.getElementById("first-level");
+    let secondLevelMain = document.getElementById("testtest");
+    let secondLevel = document.querySelectorAll("second-level");
 
-  let navHam = document.getElementById('nav-ham');
-  let firstLevel = document.getElementById('first-level');
-  let secondLevelMain = document.getElementById('testtest');
-  let secondLevel = document.querySelectorAll('second-level');
+    //Mobile nav:
 
-//Mobile nav:
+    let ShowMobileNav = function (e) {
+      navHam.classList.toggle("active");
+      firstLevel.classList.toggle("active");
+      e.stopPropagation();
+    };
 
-let ShowMobileNav = function(e) {
-  navHam.classList.toggle('active');
-  firstLevel.classList.toggle('active');
-  e.stopPropagation();
+    navHam.addEventListener("click", ShowMobileNav, false);
 
-  
-}
+    //Second level:
 
-navHam.addEventListener("click", ShowMobileNav, false);
+    let showSecondNav = function (e) {
+      let thisul = this.parentNode.querySelector("ul");
+      thisul.classList.toggle("active");
 
-//Second level:
+      for (let item of secondLevel) {
+        if (item !== secondLevel) {
+          item.classList.remove("active");
+        }
+      }
 
-let showSecondNav = function(e) {
-  // secondLevel.classList.toggle('active');
-  let thisul = this.parentNode.querySelector("ul");
-  thisul.classList.toggle("active");
+      const element = document.querySelector(".second");
+      if (thisul.className == "second-level active") {
+        element.classList.add("down");
+      } else {
+        element.classList.remove("down");
+      }
+      e.stopPropagation();
+    };
 
-  for (let item of secondLevel) {
-    if (item !== secondLevel) {
-      item.classList.remove('active');
-    }
-  }
+    secondLevelMain.addEventListener("click", showSecondNav, false);
 
-  console.log(thisul.classList);
+    //Hide mobile navigation bar
 
-  const element = document.querySelector('.second');
-  if(thisul.className == 'second-level active'){
-    element.style.backgroundColor = 'red';
-    // element.dataset.content = `\25B2`;
-  } else {
-    element.style.backgroundColor = 'white';
-    // element.dataset.content = `\25BC`;
-  }
+    let hideMobileNav = function (e) {
+      navHam.classList.remove("active");
+      firstLevel.classList.remove("active");
+      e.stopPropagation();
+      for (let item of secondLevel) {
+        item.classList.remove("active");
+      }
+    };
 
-
-  e.stopPropagation();
-
-
-
-}
-
-secondLevelMain.addEventListener("click", showSecondNav, false);
-
-//Hide mobile navigation bar 
-
-let hideMobileNav = function(e) {
-  navHam.classList.remove('active');
-  firstLevel.classList.remove('active');
-  e.stopPropagation();
-  for(let item of secondLevel) {
-    item.classList.remove('active');
-  }
-}
-
-document.documentElement.addEventListener('click', hideMobileNav, false);
-
-}, false)
-
-
-
+    document.documentElement.addEventListener("click", hideMobileNav, false);
+  },
+  false
+);
