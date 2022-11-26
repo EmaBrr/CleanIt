@@ -1,9 +1,68 @@
 body {
-    background-color: $background;
-    width: 100%;
-    height: 100vh;
-    min-width: 390px;
+  background-color: $background;
+  width: 100%;
+  height: 100vh;
+  min-width: 390px;
 }
 
+#slider {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 60px);
+  overflow: hidden;
+}
 
-// https://codepen.io/pintergabor/pen/wvaYpGB
+#slider ul {
+  position: relative;
+  list-style: none;
+  height: 100%;
+  width: calc(100%*3);
+  padding: 0;
+  margin: 0;
+  transition: all 750ms ease;
+  left: 0;
+}
+#slider ul li {
+  position: relative;
+  height: calc(100vh - 60px);
+  width: 100%;
+  
+  float: left;
+  width: auto;
+}
+
+#slider ul li img{
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  // height: calc(100vh - 60px);
+  // object-fit: contain;
+}
+
+#slider #prev, #slider #next {
+  width: 50px;
+  line-height: 50px;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  position: absolute;
+  top: 50%;
+  // border: 1px solid red;
+  border-radius: 50%;
+  font-size: 2rem;
+  text-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+  transform: translateY(-50%);
+  transition: all 150ms ease;
+}
+
+#slider #prev {
+  left: 10px;
+}
+#slider #next {
+  right: 10px;
+}
+
+#slider #prev:hover, #slider #next:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+  text-shadow: 0;
+}
