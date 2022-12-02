@@ -146,6 +146,7 @@ h6 {
   position: absolute;
   left: 10px;
   top: calc(34px / 2);
+  z-index: 1;
   cursor: pointer;
   padding: 10px 35px 10px 0px;
 }
@@ -207,6 +208,7 @@ h6 {
   margin: 0;
   z-index: 1000;
   padding: 0;
+  background-color: white;
 }
 
 @media screen and (min-width: 799px) {
@@ -283,7 +285,6 @@ h6 {
 .navigation .nav-container .nav .first-level .active {
   display: block;
   width: 100%;
-  background-color: white;
   padding: 10px 20px;
   line-height: 50px;
   margin-right: 20px;
@@ -302,66 +303,60 @@ h6 {
 body {
   background-color: #F3F4F3;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   min-width: 390px;
 }
 
-#slider {
+.slider-container {
   width: 100%;
-  height: calc(100vh - 60px);
-  overflow: hidden;
-  z-index: 0;
-}
-
-#slider ul {
+  display: inline-block;
   position: relative;
-  list-style: none;
-  height: 100%;
-  width: calc(100%*3);
-  padding: 0;
-  margin: 0;
-  transition: all 750ms ease;
-  left: 0;
+  z-index: -150;
 }
 
-#slider ul li {
-  position: relative;
-  height: calc(100vh - 60px);
+.slide {
+  display: none;
+}
+
+img {
+  vertical-align: middle;
+  height: 800px;
   width: 100%;
-  float: left;
-  width: auto;
 }
 
-#slider ul li img {
-  width: 100%;
-  align-items: center;
-  justify-content: center;
-}
-
-#slider #prev, #slider #next {
-  width: 50px;
-  line-height: 50px;
-  text-align: center;
-  color: white;
-  text-decoration: none;
-  position: absolute;
-  top: 50%;
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
   border-radius: 50%;
-  font-size: 2rem;
-  text-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
-  transform: translateY(-50%);
-  transition: all 150ms ease;
+  display: inline-block;
+  transition: background-color 0.6s ease;
 }
 
-#slider #prev {
-  left: 10px;
+.active {
+  background-color: #353535;
 }
 
-#slider #next {
-  right: 10px;
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
 }
 
-#slider #prev:hover, #slider #next:hover {
-  background-color: rgba(0, 0, 0, 0.5);
-  text-shadow: 0;
+@keyframes fade {
+  from {
+    opacity: .4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {
+    font-size: 11px;
+  }
 }
