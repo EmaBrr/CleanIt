@@ -235,9 +235,6 @@ h6 {
     color: black;
     line-height: 60px;
   }
-  .navigation .nav-container .nav .first-level li a :visited {
-    color: #5b72b8;
-  }
 }
 
 @media screen and (min-width: 799px) {

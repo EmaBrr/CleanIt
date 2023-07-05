@@ -124,17 +124,17 @@
               color: black;
               line-height: 60px;
               :visited {
-                color: #5b72b8;
+                // color: #5b72b8;
               }
             }
           }
           .second {
             @media screen and (min-width: 799px) {
-            border: 1px solid #5b72b8;
+            border: 1px solid $blue;
             height: 15px;
             padding: 10px;
             border-radius: 30px;
-            background-color: #5b72b8;
+            background-color: $blue;
             color: white;
             }
             &::after {
@@ -163,8 +163,8 @@
             display: none;
             min-width: 300px;
             border: 1px solid red;
-            background-color: #5b72b8;
-            border: 1px solid #5b72b8;
+            background-color: $blue;
+            border: 1px solid $blue;
             color: white;
             border-radius: 5px;
             // box-shadow: 3px 2px 20px 2px rgb(216, 216, 216);
