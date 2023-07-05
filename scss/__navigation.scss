@@ -1,5 +1,6 @@
 .navigation {
   width: 100%;
+  display: inline-block;
   height: 60px;
   min-width: 390px;
   background-color: white;
@@ -7,7 +8,7 @@
   text-transform: uppercase;
   box-shadow: 2px 2px 10px rgb(216, 216, 216);
   .nav-container {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
     .brand {
       position: absolute;
@@ -122,9 +123,20 @@
               padding: 0px 25px;
               color: black;
               line-height: 60px;
+              :visited {
+                color: #5b72b8;
+              }
             }
           }
           .second {
+            @media screen and (min-width: 799px) {
+            border: 1px solid #5b72b8;
+            height: 15px;
+            padding: 10px;
+            border-radius: 30px;
+            background-color: #5b72b8;
+            color: white;
+            }
             &::after {
               padding-left: 4px;
               content: "\25BC";
@@ -150,6 +162,11 @@
             position: absolute;
             display: none;
             min-width: 300px;
+            border: 1px solid red;
+            background-color: #5b72b8;
+            border: 1px solid #5b72b8;
+            color: white;
+            border-radius: 5px;
             // box-shadow: 3px 2px 20px 2px rgb(216, 216, 216);
             box-shadow:2px 2px 3px rgb(216, 216, 216), -2px 2px 3px rgb(216, 216, 216);
           }
@@ -162,6 +179,7 @@
               line-height: 16px;
               @media screen and (min-width: 799px) {
                 padding: 15px;
+                color: white;
               }
             }
           }

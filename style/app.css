@@ -88,6 +88,7 @@ h6 {
 
 .navigation {
   width: 100%;
+  display: inline-block;
   height: 60px;
   min-width: 390px;
   background-color: white;
@@ -97,7 +98,7 @@ h6 {
 }
 
 .navigation .nav-container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
 }
 
@@ -234,6 +235,20 @@ h6 {
     color: black;
     line-height: 60px;
   }
+  .navigation .nav-container .nav .first-level li a :visited {
+    color: #5b72b8;
+  }
+}
+
+@media screen and (min-width: 799px) {
+  .navigation .nav-container .nav .first-level li .second {
+    border: 1px solid #5b72b8;
+    height: 15px;
+    padding: 10px;
+    border-radius: 30px;
+    background-color: #5b72b8;
+    color: white;
+  }
 }
 
 .navigation .nav-container .nav .first-level li .second::after {
@@ -261,6 +276,11 @@ h6 {
     position: absolute;
     display: none;
     min-width: 300px;
+    border: 1px solid red;
+    background-color: #5b72b8;
+    border: 1px solid #5b72b8;
+    color: white;
+    border-radius: 5px;
     box-shadow: 2px 2px 3px #d8d8d8, -2px 2px 3px #d8d8d8;
   }
 }
@@ -279,6 +299,7 @@ h6 {
 @media screen and (min-width: 799px) {
   .navigation .nav-container .nav .first-level .second-level li a {
     padding: 15px;
+    color: white;
   }
 }
 
