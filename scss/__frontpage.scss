@@ -4,9 +4,9 @@
   justify-content: center;
   align-items: center;
   display: flex;
-    z-index: 0;
+  z-index: 0;
   @media screen and (min-width: 799px) {
-    height: 80vh;
+    height: 70vh;
   }
   .slide {
     height: 60vh;
@@ -14,7 +14,7 @@
     display: grid;
     place-items: center;
     @media screen and (min-width: 799px) {
-      height: 80vh;
+      height: 70vh;
     }
     img {
       // z-index: 0;
@@ -26,12 +26,15 @@
 }
 
 .general {
-  height: 20vh;
+  // height: 20vh;
   width: 100%;
-  background-color: white;
+  background-color: #294431;
   display: flex;
   justify-content: center;
   align-items: center;
+  // border: 1px solid red;
+  padding-top: 50px;
+  padding-bottom: 50px;
   .containerforgeneral {
     max-width: 1400px;
     width: 100%;
@@ -39,11 +42,30 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    // margin-top: 50px;
     .item {
-      display: inline-block;
-      height: 130px;
+      display: flex;
+      flex-direction: column;
+      height: auto;
       width: calc(100% / 3.3);
-      border: 1px solid black;
+      // border: 1px solid black;
+      justify-content: center;
+      align-items: center;
+      img {
+        width: 100px;
+        border-radius: 50%;
+        background-color: white;
+        padding: 20px;
+        border: 2px dashed black;
+      }
+      h2 {
+        padding-top: 20px;
+        font-family: "Josefin Sans", sans-serif;
+        font-size: 18px;
+        font-weight: 300;
+        color: white;
+
+      }
     }
   }
 }
