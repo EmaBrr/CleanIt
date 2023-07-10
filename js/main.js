@@ -80,3 +80,19 @@ function showSlide() {
   dots[slideIndex-1].className += " active";
   setTimeout(showSlide, 5000);
 }
+
+function decreaseQuantity() {
+  var quantityInput = document.getElementById('quantity-input');
+  var currentQuantity = parseInt(quantityInput.value);
+
+  if (currentQuantity > 1) {
+    quantityInput.value = currentQuantity - 1;
+  }
+}
+
+function increaseQuantity() {
+  var quantityInput = document.getElementById('quantity-input');
+  var currentQuantity = parseInt(quantityInput.value);
+
+  quantityInput.value = currentQuantity + 1;
+}

@@ -1,0 +1,110 @@
+.product-wrapper {
+  width: 100%;
+  height: 85vh;
+  // border: 1px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .product-container {
+    width: 100%;
+    height: 70vh;
+    max-width: 1400px;
+    // border: 1px solid blue;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    .product {
+      width: calc((100% / 3) * 1.5);
+      // border: 1px solid yellow;
+      height: 70vh;
+      img {
+        height: 100%;
+        object-fit: contain;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 0px;
+        // background-color: #9eb29f;
+        background-color: white;
+        border-radius: 30px;
+      }
+    }
+    .product-info {
+      width: calc((100% / 3) * 2);
+      // border: 1px solid greenyellow;
+      height: 70vh;
+      margin-left: 80px;
+      background-color: white;
+      border-radius: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      // align-items: center;
+      padding: 50px;
+      h1 {
+        font-family: $josefin;
+        text-transform: uppercase;
+        font-size: 2rem;
+        font-weight: 400;
+        padding-bottom: 30px;
+      }
+      h2 {
+        font-family: $josefin;
+        // text-transform: uppercase;
+        font-size: 1.7rem;
+        font-weight: 300;
+        padding-bottom: 30px;
+      }
+      .price {
+        font-size: 2rem;
+        font-weight: 400;
+      }
+      .buy-info {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        .quantity {
+          display: flex;
+          align-items: center;
+          // justify-content: center;
+            
+          input[type="number"] {
+            width: 50px;
+            height: 50px;
+            padding: 5px;
+            text-align: center;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1.5rem;
+            font-family: $josefin;
+            font-weight: 400;
+          }
+
+          button {
+            width: 50px;
+            height: 50px;
+            background-color: #f8f8f8;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+            color: #555;
+            cursor: pointer;
+            font-size: 1.5rem;
+            font-family: $josefin;
+            font-weight: 400;
+            margin: 0 5px;
+            transition: background-color 0.3s ease;
+
+            &:hover {
+              background-color: #e0e0e0;
+            }
+
+            &:active {
+              background-color: #ccc;
+            }
+          }
+        }
+      }
+    }
+  }
+}

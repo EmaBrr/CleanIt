@@ -402,3 +402,115 @@ body {
   font-weight: 300;
   color: white;
 }
+
+.product-wrapper {
+  width: 100%;
+  height: 85vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-wrapper .product-container {
+  width: 100%;
+  height: 70vh;
+  max-width: 1400px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-wrapper .product-container .product {
+  width: calc((100% / 3) * 1.5);
+  height: 70vh;
+}
+
+.product-wrapper .product-container .product img {
+  height: 100%;
+  object-fit: contain;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0px;
+  background-color: white;
+  border-radius: 30px;
+}
+
+.product-wrapper .product-container .product-info {
+  width: calc((100% / 3) * 2);
+  height: 70vh;
+  margin-left: 80px;
+  background-color: white;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 50px;
+}
+
+.product-wrapper .product-container .product-info h1 {
+  font-family: "Josefin Sans", sans-serif;
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: 400;
+  padding-bottom: 30px;
+}
+
+.product-wrapper .product-container .product-info h2 {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.7rem;
+  font-weight: 300;
+  padding-bottom: 30px;
+}
+
+.product-wrapper .product-container .product-info .price {
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.product-wrapper .product-container .product-info .buy-info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-wrapper .product-container .product-info .buy-info .quantity {
+  display: flex;
+  align-items: center;
+}
+
+.product-wrapper .product-container .product-info .buy-info .quantity input[type="number"] {
+  width: 50px;
+  height: 50px;
+  padding: 5px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1.5rem;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 400;
+}
+
+.product-wrapper .product-container .product-info .buy-info .quantity button {
+  width: 50px;
+  height: 50px;
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  color: #555;
+  cursor: pointer;
+  font-size: 1.5rem;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 400;
+  margin: 0 5px;
+  transition: background-color 0.3s ease;
+}
+
+.product-wrapper .product-container .product-info .buy-info .quantity button:hover {
+  background-color: #e0e0e0;
+}
+
+.product-wrapper .product-container .product-info .buy-info .quantity button:active {
+  background-color: #ccc;
+}
