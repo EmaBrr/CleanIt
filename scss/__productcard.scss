@@ -1,22 +1,23 @@
 .product-wrapper {
   width: 100%;
-  height: 85vh;
-  // border: 1px solid red;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  @media screen and (max-width: 799px) {
+    width: 100%;
+    height: 100vh;
+  }
   .product-container {
     width: 100%;
     height: 70vh;
     max-width: 1400px;
-    // border: 1px solid blue;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     .product {
       width: calc((100% / 3) * 1.5);
-      // border: 1px solid yellow;
       height: 70vh;
       img {
         height: 100%;
@@ -24,14 +25,12 @@
         justify-content: center;
         align-items: center;
         padding: 20px 0px;
-        // background-color: #9eb29f;
         background-color: white;
         border-radius: 30px;
       }
     }
     .product-info {
       width: calc((100% / 3) * 2);
-      // border: 1px solid greenyellow;
       height: 70vh;
       margin-left: 80px;
       background-color: white;
@@ -39,7 +38,6 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      // align-items: center;
       padding: 50px;
       h1 {
         font-family: $josefin;
@@ -50,7 +48,6 @@
       }
       h2 {
         font-family: $josefin;
-        // text-transform: uppercase;
         font-size: 1.7rem;
         font-weight: 300;
         padding-bottom: 30px;
@@ -62,12 +59,10 @@
       .buy-info {
         width: 100%;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         .quantity {
           display: flex;
           align-items: center;
-          // justify-content: center;
-            
           input[type="number"] {
             width: 50px;
             height: 50px;
@@ -79,7 +74,6 @@
             font-family: $josefin;
             font-weight: 400;
           }
-
           button {
             width: 50px;
             height: 50px;
@@ -94,14 +88,54 @@
             font-weight: 400;
             margin: 0 5px;
             transition: background-color 0.3s ease;
-
             &:hover {
               background-color: #e0e0e0;
             }
-
             &:active {
               background-color: #ccc;
             }
+          }
+        }
+        .buy-btn {
+          height: 50px;
+          cursor: pointer;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          margin-left: 15px;
+          background-color: #294431;
+          color: white;
+          font-size: 1.7rem;
+          font-family: $josefin;
+          padding: 0px 20px;
+          font-weight: 300;
+          display: flex;
+          align-items: center;
+          flex-direction: row;
+          &:hover {
+            background-color: #9eb89f;
+          }
+          img {
+            width: 30px;
+            height: 30px;
+          }
+          h2 {
+            padding-bottom: 0px;
+            padding-left: 12px;
+          }
+        }
+        .heart {
+          width: 50px;
+          height: 50px;
+          background-color: #294431;
+          margin-left: 15px;
+          border-radius: 4px;
+          border: 1px solid #ccc;
+          &:hover {
+            background-color: #9eb89f;
+          }
+          img {
+            width: 45px;
+            height: 45px;
           }
         }
       }

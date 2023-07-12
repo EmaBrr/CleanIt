@@ -81,6 +81,8 @@ function showSlide() {
   setTimeout(showSlide, 5000);
 }
 
+//quantity button
+
 function decreaseQuantity() {
   var quantityInput = document.getElementById('quantity-input');
   var currentQuantity = parseInt(quantityInput.value);
@@ -96,3 +98,18 @@ function increaseQuantity() {
 
   quantityInput.value = currentQuantity + 1;
 }
+
+//memorize button
+
+// const memorizeButton = document.getElementById('memorize-btn');
+
+// memorizeButton.addEventListener('click', () => {
+//   if (memorizeButton.textContent === 'Memorize') {
+//     memorizeButton.textContent = 'Memorized!';
+//     memorizeButton.style.backgroundColor = '#9eb89f';
+//   } else {
+//     memorizeButton.textContent = 'Memorize';
+//     memorizeButton.style.backgroundColor = '#294431';
+//   }
+// });
+
